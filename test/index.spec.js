@@ -1,9 +1,11 @@
 const assert = require('assert');
+const {expect} = require('chai');
 const {sum, sum1, isAdult, sortArrayUp,isPalindrome, isOddNumber, isEvenNumber} = require('../index');
 
 describe('function sum', () => {
     it('should function  sum equals 26', () => {
-        assert.equal(sum(15, 11), 26);
+        //assert.equal(sum(15, 11), 26);
+        expect(sum(15,11)).eq(26);
     });
 
     it('should function a not equals 0', () => {
@@ -16,10 +18,12 @@ it('should function sum1 equals 100',  () => {
 });
 describe('function isAdult', () => {
     it ('should the function show the correct age is equal to or greater than 21', () =>{
-        assert.equal(isAdult(15), false);
+        //assert.equal(isAdult(15), false);
+        expect(isAdult(15)).false;
     });
     it ('should the function show the correct age is equal to or greater than 21', () => {
-        assert.equal(isAdult(21), true);
+        //assert.equal(isAdult(21), true);
+        expect(isAdult(21)).true;
     });
 });
 describe('function sortArrayUp', () => {
