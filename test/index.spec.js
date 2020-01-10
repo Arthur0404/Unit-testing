@@ -4,21 +4,24 @@ const {sum, sum1, isAdult, sortArrayUp,isPalindrome, isOddNumber, isEvenNumber} 
 
 describe('function sum', () => {
     it('should function  sum equals 26', () => {
-        //assert.equal(sum(15, 11), 26);
         expect(sum(15,11)).eq(26);
     });
 
-    it('should function a not equals 0', () => {
-        assert.notEqual(sum(15, 11), 25);
+    it('should function sum not equals 0', () => {
+        expect(sum(15,11)).to.not.equal(0);
+    });
+});
+describe('function sum1', () => {
+    it('function sum1 is not equal to 0', () =>{
+        expect(sum1(5,15)).to.not.equal(0);
+    })
+    it('should function sum1 equals 100',  () => {
+        expect(sum1(50,2)).eq(100);
     });
 });
 
-it('should function sum1 equals 100',  () => {
-    assert.equal(sum1(50, 2), 100);
-});
 describe('function isAdult', () => {
     it ('should the function show the correct age is equal to or greater than 21', () =>{
-        //assert.equal(isAdult(15), false);
         expect(isAdult(15)).false;
     });
     it ('should the function show the correct age is equal to or greater than 21', () => {
@@ -28,21 +31,21 @@ describe('function isAdult', () => {
 });
 describe('function sortArrayUp', () => {
   it('should function sort array correct', () => {
-      assert.deepEqual(sortArrayUp([4,3,2,0,1]), [0,1,2,3,4])
+      expect(sortArrayUp([4,3,2,0,1])).deep.eq([0,1,2,3,4]);
   })
   it('should function sort array correct', () => {
-      assert.deepEqual(sortArrayUp([32,15,2,4,5]),[2,4,5,15,32])
+      expect(sortArrayUp([32,15,2,4,5])).deep.eq([2,4,5,15,32]);
   })
     it('should function sort array correct', () => {
-        assert.deepEqual(sortArrayUp([15,32,11,99,5,1,23,0,5,6]), [0,1,5,5,6,11,15,23,32,99])
+        expect(sortArrayUp([15,32,11,99,5,1,23,0,5,6])).deep.eq( [0,1,5,5,6,11,15,23,32,99]);
     })
 });
 describe('function isPalindrome', () => {
      it('should function works correct',() =>{
-         assert.equal(isPalindrome('Elista'), false)
+         expect(isPalindrome('Elista')).false;
      })
     it('should function works correct', () => {
-        assert.equal(isPalindrome('oko'), true)
+       expect(isPalindrome('oko')).true;
     })
     it('should function works correct', () => {
         assert.equal(isPalindrome('noon'), true)
@@ -67,7 +70,7 @@ describe('function isEvenNumber', () => {
         assert.equal(isEvenNumber(19), false)
     })
     it('function should show even numbers', () =>{
-        assert.equal(isEvenNumber('tryue'), undefined)
+        assert.equal(isEvenNumber('true'), undefined)
     })
 });
 
