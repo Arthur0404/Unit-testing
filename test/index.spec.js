@@ -1,6 +1,6 @@
 const assert = require('assert');
 const {expect} = require('chai');
-const {sum, sum1, isAdult, sortArrayUp,isPalindrome, isOddNumber, isEvenNumber} = require('../index');
+const {sum, sum1, isAdult, sortArrayUp,isPalindrome, isOddNumber, isEvenNumber,revArray} = require('../index');
 
 describe('function sum', () => {
     it('should function  sum equals 26', () => {
@@ -25,7 +25,6 @@ describe('function isAdult', () => {
         expect(isAdult(15)).false;
     });
     it ('should the function show the correct age is equal to or greater than 21', () => {
-        //assert.equal(isAdult(21), true);
         expect(isAdult(21)).true;
     });
 });
@@ -48,30 +47,36 @@ describe('function isPalindrome', () => {
        expect(isPalindrome('oko')).true;
     })
     it('should function works correct', () => {
-        assert.equal(isPalindrome('noon'), true)
+        expect(isPalindrome('noon')).true;
     })
 });
 describe('function isOddNumber', () =>{
     it('function should show odd numbers', () =>{
-        assert.equal(isOddNumber(15), true)
+        expect(isOddNumber(15)). true;
     })
     it('function should show odd numbers', () =>{
-        assert.equal(isOddNumber(22), false)
+        expect(isOddNumber(22)). false;
     })
     it('function should show odd numbers', () =>{
-        assert.equal(isOddNumber('Elista'), undefined)
+        expect(isOddNumber('Elista')). undefined;
     })
 });
 describe('function isEvenNumber', () => {
    it('function should show even numbers', () => {
-       assert.equal(isEvenNumber(20), true)
+       expect(isEvenNumber(20)). true;
    })
     it('function should show even numbers', () =>{
-        assert.equal(isEvenNumber(19), false)
+        expect(isEvenNumber(19)). false;
     })
     it('function should show even numbers', () =>{
-        assert.equal(isEvenNumber('true'), undefined)
+        expect(isEvenNumber('true')). undefined;
     })
 });
+
+describe('function revArray', () => {
+    it('function revArray expands an array', () => {
+        expect(revArray([1,3,5,4,6,8])).deep.eq([8,6,4,5,3,1])
+    })
+})
 
 
